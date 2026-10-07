@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useApp } from '../context/AppContext.jsx';
 import { TIMETABLE } from '../data/timetable.js';
-import { formatDate } from '../lib/dates.js';
+import { formatDate, PLAN_START, PLAN_END } from '../lib/dates.js';
 import { blocksForMeta, dayProgressFraction, dayStatus, isBlockDone } from '../lib/progress.js';
 import { PLAN_BLOCK_MINUTES } from '../lib/storage.js';
 import { Badge, Card, EmptyState, ProgressBar, ProgressRing, SectionHeader, StatCard } from '../components/ui/index.jsx';
@@ -58,10 +58,10 @@ export function Dashboard() {
               <>
                 <p className="chip bg-brand-100 text-brand-700 dark:bg-brand-900/60 dark:text-brand-300">My Journey starts tomorrow 🚀</p>
                 <h2 className="mt-3 text-2xl font-extrabold text-slate-800 dark:text-slate-100">
-                  First study day: {formatDate('2026-10-07', { weekday: true })}
+                  First study day: {formatDate(PLAN_START, { weekday: true })}
                 </h2>
                 <p className="mt-2 max-w-xl text-sm leading-relaxed text-slate-600 dark:text-slate-300">
-                  Your plan runs <strong>07 Oct 2026 → 06 Jan 2027</strong>: 92 days, 604 planned hours. Day 1 starts with Python basics, Big-O complexity and your first
+                  Your plan runs <strong>{formatDate(PLAN_START)} → {formatDate(PLAN_END)}</strong>: 92 days, 604 planned hours. Day 1 starts with Python basics, Big-O complexity and your first
                   Git commit. Everything is ready — you can browse and prepare any day from the roadmap right now.
                 </p>
                 <div className="mt-4 flex flex-wrap gap-2">
@@ -80,7 +80,7 @@ export function Dashboard() {
                   You completed {stats.daysCompleted} of 92 days
                 </h2>
                 <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">
-                  The plan ended on 06 Jan 2027 but your tracker still works — browse any day, keep logging hours and reviewing mistakes.
+                  The plan ended on {formatDate(PLAN_END)} but your tracker still works — browse any day, keep logging hours and reviewing mistakes.
                 </p>
               </>
             ) : (
@@ -185,7 +185,7 @@ export function Dashboard() {
               ))}
             </ul>
           ) : (
-            <EmptyState icon="🗓️" title="Nothing scheduled yet" message="The 92-day plan starts on 07 Oct 2026. Preview Day 1 in the roadmap." />
+            <EmptyState icon="🗓️" title="Nothing scheduled yet" message={`The 92-day plan starts on ${formatDate(PLAN_START)}. Preview Day 1 in the roadmap.`} />
           )}
           {focusMeta ? (
             <div className="mt-3 rounded-xl bg-slate-50 p-3 text-xs text-slate-600 dark:bg-slate-800/60 dark:text-slate-300">

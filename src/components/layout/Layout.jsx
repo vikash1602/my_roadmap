@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
 import { useApp } from '../../context/AppContext.jsx';
-import { formatDate } from '../../lib/dates.js';
+import { formatDate, PLAN_START, PLAN_END } from '../../lib/dates.js';
 import { SearchOverlay } from '../SearchOverlay.jsx';
 
 export const NAV_GROUPS = [
@@ -107,7 +107,7 @@ export function Layout() {
 
   const positionChip =
     position.stage === 'before'
-      ? `Starts ${formatDate('2026-10-07')} (in ${position.daysUntilStart} day${position.daysUntilStart === 1 ? '' : 's'})`
+      ? `Starts ${formatDate(PLAN_START)} (in ${position.daysUntilStart} day${position.daysUntilStart === 1 ? '' : 's'})`
       : position.stage === 'after'
         ? 'Plan completed'
         : `Day ${stats.todayDay} of 92`;
@@ -135,7 +135,7 @@ export function Layout() {
           ))}
         </nav>
         <div className="border-t border-slate-200 px-4 py-3 text-[11px] text-slate-500 dark:border-slate-800 dark:text-slate-400">
-          <p className="font-semibold text-slate-600 dark:text-slate-300">07 Oct 2026 → 06 Jan 2027</p>
+          <p className="font-semibold text-slate-600 dark:text-slate-300">{formatDate(PLAN_START)} → {formatDate(PLAN_END)}</p>
           <p>92 days · 604 planned hours</p>
         </div>
       </aside>

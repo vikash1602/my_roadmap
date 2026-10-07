@@ -37,7 +37,7 @@ export const WEEKLY_CHECKPOINTS = [
  {
   "week": 1,
   "day": 5,
-  "date": "2026-10-11",
+  "date": "2026-10-12",
   "sunday": {
    "Python": "Rebuild a script from memory using variables, input(), f-strings, operators and an if/elif/else",
    "DSA": "Re-solve 3 pattern / maths problems unaided; explain O(n) vs O(n^2) aloud",
@@ -48,7 +48,7 @@ export const WEEKLY_CHECKPOINTS = [
  {
   "week": 2,
   "day": 12,
-  "date": "2026-10-18",
+  "date": "2026-10-19",
   "sunday": {
    "Python": "Rebuild a list / dict / set exercise and a comprehension from memory",
    "DSA": "Re-solve one sorting algorithm, one hashing and one array problem unaided",
@@ -59,7 +59,7 @@ export const WEEKLY_CHECKPOINTS = [
  {
   "week": 3,
   "day": 19,
-  "date": "2026-10-25",
+  "date": "2026-10-26",
   "sunday": {
    "Python": "Rebuild a module with a __main__ guard and a safe_input with exceptions from memory",
    "DSA": "Re-solve Two Sum, Kadane's algorithm and 3Sum unaided",
@@ -70,7 +70,7 @@ export const WEEKLY_CHECKPOINTS = [
  {
   "week": 4,
   "day": 26,
-  "date": "2026-11-01",
+  "date": "2026-11-02",
   "sunday": {
    "Python": "Rebuild a 3-class hierarchy from memory; Project 0 menu skeleton running",
    "DSA": "Re-solve lower bound and 2 binary-search-on-answer problems unaided",
@@ -81,7 +81,7 @@ export const WEEKLY_CHECKPOINTS = [
  {
   "week": 5,
   "day": 33,
-  "date": "2026-11-08",
+  "date": "2026-11-09",
   "sunday": {
    "Python": "Rebuild Project 0 JSON save / load from memory",
    "DSA": "Re-solve reverse linked list, detect cycle and middle node unaided",
@@ -92,7 +92,7 @@ export const WEEKLY_CHECKPOINTS = [
  {
   "week": 6,
   "day": 40,
-  "date": "2026-11-15",
+  "date": "2026-11-16",
   "sunday": {
    "Python": "Write a type-hinted dataclass and a pytest test from memory",
    "DSA": "Re-solve subsets, valid parentheses and a bit trick unaided",
@@ -103,7 +103,7 @@ export const WEEKLY_CHECKPOINTS = [
  {
   "week": 7,
   "day": 47,
-  "date": "2026-11-22",
+  "date": "2026-11-23",
   "sunday": {
    "Python": "Answer 10 Python interview questions aloud; use Counter and defaultdict from memory",
    "DSA": "Re-solve a sliding-window, a monotonic-stack and a heap problem unaided",
@@ -114,7 +114,7 @@ export const WEEKLY_CHECKPOINTS = [
  {
   "week": 8,
   "day": 54,
-  "date": "2026-11-29",
+  "date": "2026-11-30",
   "sunday": {
    "Python": "Rebuild the CSV-to-JSON pipeline and a sqlite3 script from memory",
    "DSA": "Re-solve 3 tree problems (height, LCA, level order) unaided",
@@ -125,7 +125,7 @@ export const WEEKLY_CHECKPOINTS = [
  {
   "week": 9,
   "day": 61,
-  "date": "2026-12-06",
+  "date": "2026-12-07",
   "sunday": {
    "Python": "Rebuild a custom exception hierarchy and a pytest test from memory",
    "DSA": "Re-solve BFS, DFS and number of islands unaided",
@@ -136,7 +136,7 @@ export const WEEKLY_CHECKPOINTS = [
  {
   "week": 10,
   "day": 68,
-  "date": "2026-12-13",
+  "date": "2026-12-14",
   "sunday": {
    "Python": "Rebuild a small utility module with tests from memory",
    "DSA": "Re-solve 3 DP problems of different shapes unaided",
@@ -147,7 +147,7 @@ export const WEEKLY_CHECKPOINTS = [
  {
   "week": 11,
   "day": 75,
-  "date": "2026-12-20",
+  "date": "2026-12-21",
   "sunday": {
    "Python": "Write a requests script with error handling against your own API from memory",
    "DSA": "Re-solve one tree, one graph and one DP problem from the timed mixed sets",
@@ -158,7 +158,7 @@ export const WEEKLY_CHECKPOINTS = [
  {
   "week": 12,
   "day": 82,
-  "date": "2026-12-27",
+  "date": "2026-12-28",
   "sunday": {
    "Python": "Python mock Q&A: 15 questions, timed",
    "DSA": "Re-solve 3 problems from your error log",
@@ -169,7 +169,7 @@ export const WEEKLY_CHECKPOINTS = [
  {
   "week": 13,
   "day": 89,
-  "date": "2027-01-03",
+  "date": "2027-01-04",
   "sunday": {
    "Python": "Clean Python utilities with type hints and tests",
    "DSA": "Review mock 2; re-solve what you missed",
@@ -180,7 +180,7 @@ export const WEEKLY_CHECKPOINTS = [
  {
   "week": 14,
   "day": 92,
-  "date": "2027-01-06",
+  "date": "2027-01-07",
   "sunday": {
    "Python": "15-minute interview mock",
    "DSA": "re-solve 5 problems from the error log",

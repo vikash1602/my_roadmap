@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { useApp } from '../context/AppContext.jsx';
 import { TIMETABLE } from '../data/timetable.js';
-import { formatDate } from '../lib/dates.js';
+import { formatDate, PLAN_START } from '../lib/dates.js';
 import { blocksForMeta, dayActualMinutes, dayProgressFraction, dayStatus, isDayComplete } from '../lib/progress.js';
 import { BACKLOG_PRIORITIES } from '../lib/storage.js';
 import { Badge, Card, ProgressBar, ProgressRing, SectionHeader } from '../components/ui/index.jsx';
@@ -197,7 +197,7 @@ export function Today() {
 
   const notice = useMemo(() => {
     if (stats.position.stage === 'before') {
-      return `The plan starts on ${formatDate('2026-10-07')} — this is a preview of Day 1. You can already tick things off if you start early.`;
+      return `The plan starts on ${formatDate(PLAN_START)} — this is a preview of Day 1. You can already tick things off if you start early.`;
     }
     if (stats.position.stage === 'after') {
       return 'The 92-day plan is finished. This is Day 92 — you can still browse and update any day.';

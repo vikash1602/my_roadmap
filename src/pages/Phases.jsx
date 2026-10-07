@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useApp } from '../context/AppContext.jsx';
 import { PHASES } from '../data/phases.js';
 import { PROJECTS } from '../data/projects.js';
-import { formatDate, todayISO } from '../lib/dates.js';
+import { formatDate, todayISO, PLAN_START, PLAN_END } from '../lib/dates.js';
 import { isDayComplete } from '../lib/progress.js';
 import { TIMETABLE } from '../data/timetable.js';
 import { Badge, Card, ProgressBar, SectionHeader } from '../components/ui/index.jsx';
@@ -126,7 +126,7 @@ export function Phases() {
       <Card>
         <SectionHeader
           title="Phase Progress Overview"
-          subtitle={activePhase ? `You are currently in Phase ${activePhase.id} — ${activePhase.name}` : 'The 92-day plan runs 7 Oct 2026 → 6 Jan 2027'}
+          subtitle={activePhase ? `You are currently in Phase ${activePhase.id} — ${activePhase.name}` : `The 92-day plan runs ${formatDate(PLAN_START)} → ${formatDate(PLAN_END)}`}
         />
         <div className="flex h-4 w-full overflow-hidden rounded-full bg-slate-200 dark:bg-slate-700">
           {stats.phases.map((p, i) => (

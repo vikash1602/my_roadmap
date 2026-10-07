@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { useApp } from '../context/AppContext.jsx';
 import { TIMETABLE } from '../data/timetable.js';
-import { formatDate, todayISO } from '../lib/dates.js';
+import { formatDate, todayISO, PLAN_START, PLAN_END } from '../lib/dates.js';
 import { dayStatus } from '../lib/progress.js';
 import { Card, SectionHeader } from '../components/ui/index.jsx';
 import { DayDetailModal } from '../components/DayDetailModal.jsx';
@@ -91,10 +91,10 @@ function MonthGrid({ monthKey, label, onOpen, today }) {
         })}
       </div>
       {monthKey === '2026-10' ? (
-        <p className="mt-2 text-[11px] text-slate-400 dark:text-slate-500">Plan begins 7 Oct 2026. Cells before that are outside the plan.</p>
+        <p className="mt-2 text-[11px] text-slate-400 dark:text-slate-500">Plan begins {formatDate(PLAN_START)}. Cells before that are outside the plan.</p>
       ) : null}
       {monthKey === '2027-01' ? (
-        <p className="mt-2 text-[11px] text-slate-400 dark:text-slate-500">Plan ends 6 Jan 2027. Cells after that are outside the plan.</p>
+        <p className="mt-2 text-[11px] text-slate-400 dark:text-slate-500">Plan ends {formatDate(PLAN_END)}. Cells after that are outside the plan.</p>
       ) : null}
     </Card>
   );
